@@ -1,0 +1,29 @@
+PODS:
+  - Flutter (1.0.0)
+  - vinidpay_sdk (0.0.1):
+    - Flutter
+    - VinIDPaySDK (= 1.0.4)
+  - VinIDPaySDK (1.0.4)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - vinidpay_sdk (from `.symlinks/plugins/vinidpay_sdk/ios`)
+
+SPEC REPOS:
+  trunk:
+    - VinIDPaySDK
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  vinidpay_sdk:
+    :path: ".symlinks/plugins/vinidpay_sdk/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  vinidpay_sdk: d2953027670d7ff0cee0a3985654cba9871948f3
+  VinIDPaySDK: b8c09a10e87831c46ff73070ba346f0abeeebad7
+
+PODFILE CHECKSUM: 1b66dae606f75376c5f2135a8290850eeb09ae83
+
+COCOAPODS: 1.8.4
