@@ -137,7 +137,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future<void> isVinIdAppInstalled(bool sandboxMode) async {
-    bool _status;
+    bool? _status;
     _status = await VinidpaySdk.isVinIdAppInstalled(sandboxMode);
     print(_status);
   }

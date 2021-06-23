@@ -10,11 +10,11 @@ class VinidpaySdk {
     String sign,
     bool sandboxMode,
   ) async {
-    final String _status =
+    final String? _status =
         await _channel.invokeMethod('proceedPayment', <String, dynamic>{
-      'id': id ?? '',
-      'sign': sign ?? '',
-      'sandboxMode': sandboxMode ?? false,
+      'id': id,
+      'sign': sign,
+      'sandboxMode': sandboxMode,
     });
     switch (_status) {
       case 'payment successful!':
@@ -28,17 +28,17 @@ class VinidpaySdk {
     }
   }
 
-  static Future<bool> isVinIdAppInstalled(bool sandboxMode) async {
-    final bool _status =
+  static Future<bool?> isVinIdAppInstalled(bool sandboxMode) async {
+    final bool? _status =
         await _channel.invokeMethod('isVinIdAppInstalled', <String, dynamic>{
-      'sandboxMode': sandboxMode ?? false,
+      'sandboxMode': sandboxMode,
     });
     return _status;
   }
 
   static openVinIDInstallPage(bool sandboxMode) async {
     _channel.invokeMethod('openVinIDInstallPage', <String, dynamic>{
-      'sandboxMode': sandboxMode ?? false,
+      'sandboxMode': sandboxMode,
     });
   }
 }
